@@ -1,8 +1,16 @@
 .navbar-lewagon {
+  background: rgb(21, 7, 79);
+
+}
+.nav-link{
+  color: white;
+  display: flex;
   justify-content: space-between;
-  background: white;
 }
 
+.nav-link:hover{
+  color: rgb(209, 194, 194);
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }

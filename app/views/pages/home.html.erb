@@ -1,2 +1,77 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between">
+      <ul class="navbar-nav me-auto">
+        <%# if user_signed_in? %>
+          <div>
+            <li class="nav-item active">
+              <%= link_to "Home", "#", class: "nav-link" %>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <%= link_to "About us", "#", class: "nav-link" %>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <%= link_to "Login", "#", class: "nav-link" %>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <%= link_to "Signup", "#", class: "nav-link" %>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item dropdown">
+              <%= image_tag "https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlubmVyJTIwdGFibGV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "My booking", "#", class: "dropdown-item" %>
+                <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              </div>
+            </li>
+          </div>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1485921325833-c519f76c4927?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWtlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Garlic Salmon</h5>
+      <h4 class="card-text">Fish</h4>
+      <a href="#" class="btn btn-primary">Book Dinner</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpa2VuJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Chicken</h5>
+       <h4 class="card-text">Chicken</h4>
+      <a href="#" class="btn btn-primary">Book Dinner</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpa2VuJTIwZm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Pasta bolognese</h5>
+       <h4 class="card-text">Pasta</h4>
+      <a href="#" class="btn btn-primary">Book Dinner</a>
+    </div>
+  </div>
+</div>
