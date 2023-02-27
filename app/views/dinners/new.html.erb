@@ -1,0 +1,8 @@
+<h1>Add the details to your dinner event:</h1>
+
+<%= simple_form_for(@dinner) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :category %>
+  <%= f.input :date %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>Currently available Dinners</h1>
+
+<div class="cards">
+  <% @dinners.each do |dinner| %>
+    <div class="card-category">
+      <%= link_to dinner.title, dinner_path(dinner) %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-success" %>
