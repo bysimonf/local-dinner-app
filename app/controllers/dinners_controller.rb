@@ -9,12 +9,15 @@ class DinnersController < ApplicationController
 
   def create
     @dinner = Dinner.new(dinner_params)
+    @user = current_user
+    @dinner.user = @user
+    
+
     if @dinner.save
       redirect_to dinner_path(@dinner)
     else
       render :new, status: :unprocessable_entity
     end
-    raise
   end
 
   def show
