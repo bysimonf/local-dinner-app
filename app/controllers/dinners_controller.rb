@@ -16,7 +16,7 @@ class DinnersController < ApplicationController
     if @dinner.save
       redirect_to dinner_path(@dinner)
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
