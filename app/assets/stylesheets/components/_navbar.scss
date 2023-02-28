@@ -1,20 +1,21 @@
-.navbar-lewagon {
-  background: rgb(21, 7, 79);
-
-}
-.nav-link{
-  color: white;
+.navbar{
+  width: 100%;
+  margin: auto;
+  padding: 10px 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background: navy;
 }
-
-.nav-link:hover{
-  color: rgb(209, 194, 194);
+.navbar h3{
+  color: white;
 }
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-item{
+  text-transform: uppercase;
+  color: white;
 }
