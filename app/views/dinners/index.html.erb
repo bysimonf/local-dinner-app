@@ -8,4 +8,6 @@
   <% end %>
 </div>
 
-<%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-success" %>
+<% if user_signed_in? %>
+  <%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-success" %>
+<% end %>
