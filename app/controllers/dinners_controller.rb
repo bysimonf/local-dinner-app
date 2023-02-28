@@ -11,7 +11,7 @@ class DinnersController < ApplicationController
     @dinner = Dinner.new(dinner_params)
     @user = current_user
     @dinner.user = @user
-    
+
 
     if @dinner.save
       redirect_to dinner_path(@dinner)
@@ -27,6 +27,6 @@ class DinnersController < ApplicationController
   private
 
   def dinner_params
-    params.require(:dinner).permit(:title, :category, :date)
+    params.require(:dinner).permit(:title, :category, :description, :date)
   end
 end
