@@ -7,8 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # 1. Create a user
-
-
 # 2. Create dinners
 
 puts "Cleaning database..."

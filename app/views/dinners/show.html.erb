@@ -1,6 +1,8 @@
 <h1>Details on <%= @dinner.title %></h1>
 
-<h2> Date: <%= @dinner.date %></h2>
-<h3> Category: <%= @dinner.category.capitalize %></h3>
+<h2>Date: <%= @dinner.date %></h2>
+<h3>Category: <%= @dinner.category.capitalize %></h3>
+<p>Location: <%=  @dinner.user.address %></p>
+<p>Host: <%=@dinner.user.name %></p>
 
 <%= link_to "Back to all dinners", dinners_path, class: "btn btn-secondary" %>
