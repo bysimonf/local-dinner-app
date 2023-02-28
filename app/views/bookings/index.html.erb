@@ -1,0 +1,12 @@
+<h1>My current bookings:</h1>
+
+<div class="cards">
+  <% @bookings.each do |booking| %>
+    <div class="card-category">
+      <% dinner = Dinner.find(booking["dinner_id"]) %>
+      <%= link_to dinner.title, dinner_path(dinner) %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Back to all dinners", dinners_path, class: "btn btn-secondary" %>
