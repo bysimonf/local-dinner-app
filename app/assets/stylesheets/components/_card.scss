@@ -1,54 +1,72 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 14px;
-  align-items: start;
-  width: 100%;
-  margin-top: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
 }
 
-.card{
-  background-color: white;
-  border-radius: 4px;
-  border: 1px solid rgb(23, 23, 104);
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-.card img{
-  display: block;
-  width: 100%;
-  height:320px;
-  object-fit: cover;
+
+.card-category:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
+
+.card-category a {
+  color: white;
+  text-decoration: none;
+}
+
+// mobile resizing
+@media (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr;
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+// tablet resizing
+@media (min-width: 576px)and (max-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.card-review {
+  overflow: auto;
+  height: 180px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // display: flex;
+  // align-items: center;
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.card-review h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-review p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-review .card-review-infos {
+  padding: 16px;
 }
