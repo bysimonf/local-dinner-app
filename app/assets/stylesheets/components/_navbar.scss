@@ -1,14 +1,15 @@
 .navbar{
-  width: 100%;
+  width: auto;
   margin: auto;
   padding: 10px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: navy;
+  background:rgb(233, 107, 107)
 }
 .navbar h3{
-  color: white;
+  color :whitesmoke;
+  font-family: cursive;
 }
 .navbar ul li{
   list-style: none;
@@ -18,4 +19,14 @@
 .nav-item{
   text-transform: uppercase;
   color: white;
+}
+
+.nav-link {
+  color:rgba(245, 245, 245, 0.512);
+
+}
+.nav-link:hover {
+  opacity: 1;
+  color:green;
+
 }

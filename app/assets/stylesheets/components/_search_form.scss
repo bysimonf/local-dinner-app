@@ -7,6 +7,10 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
+  color: green;
+  background:white;
+  transition:zip($lists: absolute)
+
 }
 
 .search-form-control .form-control {
@@ -22,27 +26,19 @@
 }
 .search-form-control .btn:hover {
   opacity: 1;
-  color: rgb(58, 53, 53);
-
-}
-.search-form-control .btn :hover {
-  background: #4D04C4;
-  color: white;
-}
-
-
-.search-form-control .btn {
-  color: rgb(58, 53, 53);
-  padding: 8px 24px;
-  border-radius: 4px;
+  color:rgb(46, 32, 112);
   background:white;
-  transition: background 0.3s ease;
+  background-color:rgba(0, 0, 255, 0.067);
 }
-.search-form-control{
+
+
+.search-form-control  {
 margin: 20px;
 
 }
+.search-form-control:hover {
 
+}
 #search_query {
 background-color: rgba(255, 255, 255, 0.673);
 }
