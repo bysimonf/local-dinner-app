@@ -1,38 +1,12 @@
-<div class="containers">
-  <div class="navbar">
-    <h3>Local Dinner</h3>
-    <ul>
-        <li class="nav-item">
-          <%= link_to "About us", "#", class: "nav-link" %>
-        </li>
-
-
-        <li class="nav-item">
-          <%= link_to "Login", "#", class: "nav-link" %>
-        </li>
-
-
-        <li class="nav-item">
-          <%= link_to "Signup", "#", class: "nav-link" %>
-        </li>
-
-
-        <li class="nav-items dropdown">
-          <%= image_tag "https://images.unsplash.com/photo-1576867757603-05b134ebc379?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlubmVyJTIwdGFibGV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "My booking", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-        </li>
-    </ul>
-  </div>
+<div class="container">
 
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);">
       <div class="container">
         <h1><strong> The Best Local Dishes</strong>   <strong>  sharing meals with love</strong>!</h1>
         <p>food  brings us together  experience  meals made with love</p>
+      </div>
 
-        </div>
-            <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+          <%= simple_form_for :search, url: root_path, method: :get do |f| %>
             <div class="search-form-control form-group">
               <input class="form-control string required" type="text" name="search[query]" id="search_query" />
               <button name="button" type="submit" class="btn btn-flat">

@@ -1,24 +1,27 @@
-.navbar{
-  width: auto;
-  margin: auto;
-  padding: 10px 10px;
-  display: flex;
-  align-items: center;
+.navbar-lewagon {
   justify-content: space-between;
-  background:rgb(233, 107, 107)
+  background: rgb(233, 107, 107);
 }
-.navbar h3{
-  color :whitesmoke;
-  font-family: cursive;
+
+.navbar-lewagon h3 {
+  margin-bottom: 0;
 }
-.navbar ul li{
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
-}
-.nav-item{
-  text-transform: uppercase;
+
+.navbar-lewagon h3,
+.navbar-lewagon .nav-link {
   color: white;
+}
+
+.navbar-lewagon .nav-link {
+  text-transform: uppercase;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
 }
 
 .nav-link {
@@ -28,5 +31,4 @@
 .nav-link:hover {
   opacity: 1;
   color:green;
-
 }
