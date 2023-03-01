@@ -25,7 +25,8 @@ class DinnersController < ApplicationController
     @user = @dinner.user
     @markers = [{
       longitude: @user.longitude,
-      latitude: @user.latitude
+      latitude: @user.latitude,
+      info_window_html: render_to_string(partial: "info_window", locals: { user: @user, dinner: @dinner })
      }]
   end
 

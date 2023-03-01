@@ -16,14 +16,24 @@ export default class extends Controller {
     })
 
     this.#addMarkersToMap()
+    this.#fitMapToMarkers()
   }
     // console.log(this.markerValue);
     #addMarkersToMap() {
       this.markersValue.forEach((marker) => {
         console.log(marker);
+        const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
         new mapboxgl.Marker()
           .setLngLat([ marker.longitude, marker.latitude ])
+          .setPopup(popup)
           .addTo(this.map)
       })
+    }
+
+    #fitMapToMarkers() {
+      console.log("check map fit");
+      const bounds = new mapboxgl.LngLatBounds()
+      this.markersValue.forEach(marker => bounds.extend([ marker.longitude, marker.latitude ]))
+      this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
     }
 }
