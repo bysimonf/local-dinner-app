@@ -22,6 +22,11 @@ class DinnersController < ApplicationController
 
   def show
     @dinner = Dinner.find(params[:id])
+    @user = @dinner.user
+    @markers = [{
+      longitude: @user.longitude,
+      latitude: @user.latitude
+     }]
   end
 
   private
