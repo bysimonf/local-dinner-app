@@ -14,7 +14,7 @@ User.destroy_all
 Dinner.destroy_all
 
 puts "Creating user + dinners..."
-dummy_user = User.create(email: "simon.frohnauer@gmail.com", password: "secret")
+dummy_user = User.create(email: "dummy@gmail.com", password: "secret", name: "cool user", address: "Stachus, Munich")
 
 pizza_event = { title: "Pizza Party", category: "italian", date: Date.today, user: dummy_user }
 pasta_event = { title: "Carbonara Event", category: "italian", date: Date.today + 10, user: dummy_user }
