@@ -18,3 +18,33 @@
   color:green;
 
 }
+
+.btn.btn-info {
+ background-color: #e96b6b;
+ border: #e96b6b;
+ border-radius: 5px 5px 5px 5px;
+ color: white;
+}
+
+.btn.btn-success {
+  background-color: #847e89;
+  color: white;
+  border: #847e89;
+  margin-bottom: 16px;
+}
+
+.btn.btn-success:hover {
+  background-color: #e96b6b;
+}
+
+.btn.btn-secondary {
+  background-color: #847e89;
+  color: white;
+  border: #847e89;
+  margin-bottom: 16px;
+}
+
+.btn.btn-secondary:hover {
+  background-color: #e96b6b;
+
+}

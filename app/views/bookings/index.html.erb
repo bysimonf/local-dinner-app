@@ -1,12 +1,33 @@
-<h1>My current bookings:</h1>
-
-<div class="cards">
-  <% @bookings.each do |booking| %>
-    <div class="card-category">
+<h1 class="text-center">My current bookings:</h1>
+<div class="center">
+  <div class="cards">
+    <% @bookings.each do |booking| %>
       <% dinner = Dinner.find(booking["dinner_id"]) %>
-      <%= link_to dinner.title, dinner_path(dinner) %>
-    </div>
-  <% end %>
+      <div class="main">
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card" tabindex="0">
+              <div class="card_image">
+                <img src="" alt="">
+              </div>
+              <div class="card_content">
+                <div class="card_text">
+                  <span class="note"><%= dinner.title %></span>
+                  <p>:runde_reißzwecke: <%= dinner.user.address %></p>
+                  <p>:tischkalender:  <%= dinner.date %> </p>
+                  <p>:messer_gabel_teller: <%= dinner.category %></p>
+                </div> <!-- card_text -->
+                <%= link_to  dinner_path(dinner),class: "btn btn-info" do %>
+                    See Detail
+                <% end %>
+              </div> <!-- card_content -->
+            </div> <!-- card -->
+          </li> <!-- cards_item -->
+        </ul> <!-- cards -->
+      </div> <!-- main -->
+    <% end %>
+  </div> <!-- cards -->
+</div> <!-- center -->
+<div class="text-center">
+  <%= link_to "Back to all dinners", dinners_path, class: "btn btn-secondary" %>
 </div>
-
-<%= link_to "Back to all dinners", dinners_path, class: "btn btn-secondary" %>

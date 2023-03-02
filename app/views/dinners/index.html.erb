@@ -1,13 +1,32 @@
-<h1>Currently available Dinners</h1>
-
-<div class="cards">
-  <% @dinners.each do |dinner| %>
-    <div class="card-category">
-      <%= link_to dinner.title, dinner_path(dinner) %>
-    </div>
+<h1 class="text-center">Currently available Dinners</h1>
+<div class="center">
+  <div class="cards">
+    <% @dinners.each do |dinner| %>
+      <div class="main">
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card" tabindex="0">
+              <div class="card_image"><img src="" alt=""></div>
+              <div class="card_content">
+                <div class="card_text">
+                  <span class="note"><%= dinner.title %></span>
+                  <p>📍 <%= dinner.user.address %></p>
+                  <p>🗓 <%= dinner.date %> </p>
+                  <p>🍽 <%= dinner.category %></p>
+                </div>
+                <%= link_to  dinner_path(dinner), class: "btn btn-info" do %>
+                    See Detail
+                <% end %>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="text-center">
+  <% if user_signed_in? %>
+    <%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-success" %>
   <% end %>
 </div>
-
-<% if user_signed_in? %>
-  <%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-success" %>
-<% end %>
