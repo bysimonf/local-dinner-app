@@ -17,6 +17,14 @@ class DinnersController < ApplicationController
     end
   end
 
+  def search
+    if params[:query].present?
+      @dinners = Dinner.where("category ILIKE ?", "%#{params[:query]}%").or(Dinner.where("CAST(date AS text) ILIKE ?", "%#{params[:query]}%"))
+    else
+      @dinners = Dinner.all
+    end
+  end
+
   def new
     @dinner = Dinner.new
   end
