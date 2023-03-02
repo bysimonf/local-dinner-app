@@ -3,6 +3,20 @@ class DinnersController < ApplicationController
     @dinners = Dinner.all
   end
 
+  def locations
+    @dinners = Dinner.all
+    @users = User.all
+    @dinners.each do |dinner|
+      @markers = @users.geocoded.map do |user|
+        {
+          latitude: user.latitude,
+          longitude: user.longitude,
+          info_window_html: render_to_string(partial: "info_window", locals: { user: user, dinner: dinner })
+        }
+      end
+    end
+  end
+
   def new
     @dinner = Dinner.new
   end
@@ -11,7 +25,6 @@ class DinnersController < ApplicationController
     @dinner = Dinner.new(dinner_params)
     @user = current_user
     @dinner.user = @user
-
 
     if @dinner.save
       redirect_to dinner_path(@dinner)
@@ -27,7 +40,7 @@ class DinnersController < ApplicationController
       longitude: @user.longitude,
       latitude: @user.latitude,
       info_window_html: render_to_string(partial: "info_window", locals: { user: @user, dinner: @dinner })
-     }]
+      }]
   end
 
   private
