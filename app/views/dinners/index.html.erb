@@ -2,9 +2,7 @@
 
 <div class="cards">
   <% @dinners.each do |dinner| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?dinner&<%= rand(1..1000) %>')">
-      <%= link_to dinner.title, dinner_path(dinner) %>
-    </div>
+    <%= render "dinners/dinner_preview_card", dinner: dinner %>
   <% end %>
 </div>
 
