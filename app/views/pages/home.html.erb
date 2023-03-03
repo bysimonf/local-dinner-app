@@ -24,24 +24,4 @@
 
 <%= render "dinners/random_dinners", dinners: @dinners %>
 
-<section class="section-how-to mt-3">
-  <h2 class="gallery-headline">How it works:</h2>
-  <div class="image-gallery">
-    <div class="img-flex-item">
-      <div class="img-salmon-border"><i class="fa-solid fa-user"></i></div>
-      <div class="img-caption">1. Create your account</div>
-    </div>
-    <div class="img-flex-item">
-      <div class="img-salmon-border"><i class="fa-solid fa-pizza-slice"></i></div>
-      <div class="img-caption">2. Pick a dinner you want to join or host one</div>
-    </div>
-    <div class="img-flex-item">
-      <div class="img-salmon-border"><i class="fa-solid fa-bookmark"></i></div>
-      <div class="img-caption">3. Book it</div>
-    </div>
-    <div class="img-flex-item">
-      <div class="img-salmon-border"><i class="fa-solid fa-face-smile"></i></div>
-      <div class="img-caption">4. Enjoy</div>
-    </div>
-  </div>
-</section>
+<%= render "shared/how_to" %>
