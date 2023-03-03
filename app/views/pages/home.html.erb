@@ -22,12 +22,7 @@
 
 </div >
 
-
-<div class="cards">
-  <% @dinners.sample(3).each do |dinner| %>
-    <%= render "dinners/dinner_preview_card", dinner: dinner %>
-  <% end %>
-</div>
+<%= render "dinners/random_dinners", dinners: @dinners %>
 
 <section class="section-how-to mt-3">
   <h2 class="gallery-headline">How it works:</h2>

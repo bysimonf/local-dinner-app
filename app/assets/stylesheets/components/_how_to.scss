@@ -27,7 +27,7 @@
   border: 3px solid #e96b6b;
   border-radius: 6px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 64px;
   color: #e96b6b;
@@ -35,6 +35,6 @@
 
 .img-caption {
   text-align: center;
-  max-width: fit-content;
+  max-width: 160px;
   padding-top: 5px;
 }

@@ -1,0 +1,11 @@
+<div class="bg-light-grey p-5 mt-5">
+  <div>
+    <h2 class="text-center">You might like:</h2>
+
+    <div class="cards">
+      <% dinners.sample(3).each do |dinner| %>
+        <%= render "dinners/dinner_preview_card", dinner: dinner %>
+      <% end %>
+    </div>
+  </div>
+</div>
