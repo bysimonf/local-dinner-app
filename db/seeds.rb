@@ -14,13 +14,22 @@ User.destroy_all
 Dinner.destroy_all
 
 puts "Creating user + dinners..."
-dummy_user = User.create(email: "dummy@gmail.com", password: "secret", name: "cool user", address: "Stachus, Munich")
+user_bethy = User.create(email: "bethy@gmail.com", password: "secret", name: "bethy", address: "Stachus, Munich")
+user_simon = User.create(email: "simon@gmail.com", password: "secret", name: "simon", address: "Balan, Munich")
+user_ale = User.create(email: "ale@gmail.com", password: "secret", name: "yung g", address: "Harras, Munich")
+user_milo = User.create(email: "milo@gmail.com", password: "secret", name: "milo", address: "Odeonsplatz, Munich")
 
-pizza_event = { title: "Pizza Party", category: "italian", date: Date.today, user: dummy_user }
-pasta_event = { title: "Carbonara Event", category: "italian", date: Date.today + 10, user: dummy_user }
-steak_event = { title: "T-Bone", category: "american", date: Date.today + 100, user: dummy_user }
+pizza_event = { title: "Pizza Party", category: "italian", date: Date.today, user: user_simon, description: "Yummy Italian evening" }
+pasta_event = { title: "Carbonara Event", category: "italian", date: Date.today + 10, user: user_ale, description: "Yummy Pasta evening" }
+steak_event = { title: "T-Bone Steak", category: "american", date: Date.today + 100, user: user_milo, description: "Medium rare or well done?" }
+salad_event = { title: "Caesar Salad in the Sun", category: "american", date: Date.today + 100, user: user_bethy, description: "We'll celebrate spring!" }
 
-[pizza_event, pasta_event, steak_event].each do |attr|
+dessert_event = { title: "Pancakes and Gin Tonic", category: "german", date: Date.today, user: user_simon, description: "Please bring your favorite sweet goods" }
+fish_event = { title: "Fly like Fish Filet", category: "greek", date: Date.today + 9, user: user_ale, description: "Greek fish event" }
+ramen_event = { title: "Ramen Slurp", category: "japanese", date: Date.today + 47, user: user_milo, description: "We'll have veggie and chicken stock options" }
+cake_event = { title: "Sachertorte Speisung", category: "austrian", date: Date.today + 100, user: user_bethy, description: "1000kcal per plate" }
+
+[pizza_event, pasta_event, steak_event, salad_event, dessert_event, ramen_event, fish_event, cake_event].each do |attr|
   dinner = Dinner.create!(attr)
   puts "Created #{dinner.title}"
 end

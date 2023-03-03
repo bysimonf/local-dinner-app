@@ -3,10 +3,10 @@
 *::after {
   box-sizing: border-box;
 }
- h2 {
-  font-size: large;
+//  h2 {
+//   font-size: large;
 
-}
+// }
 
 .main {
   max-width: 1200px;
@@ -80,12 +80,12 @@
   padding: 1.2rem;
 }
 
-h2.card_title,p {
-  margin: 1.2rem 0;
-}
-h2.card_title {
-    font-size: 1.3em;
-}
+// h2.card_title,p {
+//   margin: 1.2rem 0;
+// }
+// h2.card_title {
+//     font-size: 1.3em;
+// }
 body {
   // font-family:monospace;
   background:#eee;
@@ -94,9 +94,9 @@ body {
 html {
   font-size:15px;
 }
-h2.card_title{
-  font-size: 8px;
- }
+// h2.card_title{
+//   font-size: 8px;
+//  }
 
  .img:hover {
   opacity: 1;
