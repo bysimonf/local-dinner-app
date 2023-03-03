@@ -1,16 +1,33 @@
-<h1>Details on <%= @dinner.title %></h1>
+<div class="division">
+  <div class="main">
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="https://media.istockphoto.com/id/1175505781/photo/arabic-and-middle-eastern-dinner-table-hummus-tabbouleh-salad-fattoush-salad-pita-meat-kebab.jpg?b=1&s=170667a&w=0&k=20&c=jJcxIb1PSbQ6pH3RjQVd4luCe4ixYqRM9HSriJfWaZc=" alt="mixed vegetable salad in a mason jar. "></div>
+          <div class="card_content">
+            <%= link_to "Back to all dinners", dinners_path, class: "btn btn-salmon" %>
+            <div class="card_text">
+                <h1>Details on <%= @dinner.title %></h1>
+              <h3>Date: <%= @dinner.date %></h3>
+              <h3>Category: <%= @dinner.category.capitalize %></h3>
+              <h3>Location: <%=  @dinner.user.address %></h3>
+              <h3>Host: <%=@dinner.user.name %></p> of dressing on the side: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard. Add your choice of protein for $2 more. </p>
+              </div>
+                <% if user_signed_in? %>
+                  <%= link_to "Join this dinner", dinner_bookings_path(@dinner), data: {turbo_method: :post}, class: "btn btn-salmon" %>
+                <% end %>
 
-<h2>Date: <%= @dinner.date %></h2>
-<h3>Category: <%= @dinner.category.capitalize %></h3>
-<p>Location: <%=  @dinner.user.address %></p>
-<p>Host: <%=@dinner.user.name %></p>
+          </div>
+        </div>
+      </li>
 
-<% if user_signed_in? %>
-  <%= link_to "Join this dinner", dinner_bookings_path(@dinner), data: {turbo_method: :post}, class: "btn btn-success" %>
-<% end %>
 
-<%= link_to "Back to all dinners", dinners_path, class: "btn btn-secondary" %>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+
+
+
+        <div style="width: 100%; height: 600px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>

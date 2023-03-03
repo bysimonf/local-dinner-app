@@ -50,7 +50,6 @@ gem 'bootstrap-icons-helper', '~> 1.0', '>= 1.0.1'
 # Use Sass to process CSS
 gem "sassc-rails"
 
-gem "simple_form", github: "heartcombo/simple_form"
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
