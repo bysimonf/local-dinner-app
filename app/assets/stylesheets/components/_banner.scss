@@ -1,22 +1,37 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  margin-bottom: 12px;
+.divide{
+  width: 100%;
+  display: flex;
+  margin: 60px 0 0 0;
+  gap: 10%;
+  padding: 0px 5px 10px 0 ;
+  height: 500px;
+}
+.img-card{
+  flex-basis: 50%;
+  height: auto;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }
 
-.banner h1 {
-  margin: 0;
-  color: rgb(203, 193, 193);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 45px;
-  font-weight: bold;
+
+.divide text{
+  padding-left: 10px !important;
+  flex-basis: 50%;
+  height: auto;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.divide h1,p{
+  text-align: center;
+  padding-left: 10px !important;
 }
 
+.banner{
+padding-top: 60px;
+}
+
+.search-form-control .btn{
+  border-radius: 4px;
+  border: 1px transparent;
+  color: black !important;
+  box-shadow: 1px 1px pink;
+  margin-left: 5px;
+}

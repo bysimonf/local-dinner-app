@@ -1,0 +1,25 @@
+<section class="divide">
+  <div class="banner">
+    <div class="text">
+      <h1><strong> The Best Local Dishes</strong>   <strong>  sharing meals with love</strong>!</h1>
+      <p>Food brings us together to enjo meals made with love</p>
+
+
+      <%= simple_form_for :search, url: dinners_search_path, method: :get do |f| %>
+        <div class="search-form-control form-group">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control"
+            %>
+            <%= submit_tag "Search local dinners", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+
+  </div >
+
+
+  <div class="img-card">
+      <img src="https://images.unsplash.com/photo-1548940740-204726a19be3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGRpbm5lciUyMHBhcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+  </div>
+</section>

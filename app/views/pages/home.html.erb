@@ -1,26 +1,7 @@
-<div class="container">
+<div class="banner">
+  <%= render "pages/banner" %>
+</div>
 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg);">
-    <div class="container">
-      <h1><strong> The Best Local Dishes</strong>   <strong>  sharing meals with love</strong>!</h1>
-      <p>food  brings us together  experience  meals made with love</p>
-    </div>
-
-  <%= simple_form_for :search, url: dinners_search_path, method: :get do |f| %>
-            <div class="search-form-control form-group">
-              <%# <input class="form-control string required" type="text" name="search[query]" id="search_query" /> %>
-                <%= text_field_tag :query,
-                  params[:query],
-                  class: "form-control"
-                %>
-                  <%= submit_tag "Search local dinners", class: "btn btn-primary" %>
-              <%# <button name="button" type="submit" class="btn btn-flat">
-                <i class="fas fa-search"></i> Search local dinners
-              </button> %>
-            </div>
-          <% end %>
-
-</div >
 
 
 <div class="cards">
