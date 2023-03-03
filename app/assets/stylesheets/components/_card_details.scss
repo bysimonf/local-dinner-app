@@ -24,6 +24,7 @@
 .cards_item {
   display: flex;
   padding: 1rem;
+
 }
 
 .card_image {
@@ -52,10 +53,12 @@
   width:100%;
   height:100%;
   object-fit:cover;
+  border-color: lightcoral;
 }
 
 .cards_item {
   filter:drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+
 }
 
 
@@ -65,11 +68,12 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding-left: 30px;
-  background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px),#66afe1 0 1.2rem) right bottom /100% 100%,linear-gradient(red 0 0) 30px 0/2px 100% #fff;
   background-repeat: no-repeat;
+  border-style: dotted;
   line-height: 1.2rem;
   -webkit-mask:radial-gradient(circle .8rem at 2px 50%,#0000 98%,#000)0 0/100% 2.4rem;
+  border-color: lightcoral;
+
 }
 
 .card_content {
@@ -97,4 +101,21 @@ h2.card_title{
  .img:hover {
   opacity: 1;
   height: 100%;
+}
+
+.btn-success {
+  background-color: lightcoral;
+}
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-color: lightcoral;
+}
+.division {
+display: flex;
+
+
 }
