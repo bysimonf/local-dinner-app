@@ -6,6 +6,7 @@
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 // Your CSS partials
 @import "components/index";
@@ -19,3 +20,5 @@
 @import "components/map";
 @import "components/_card_details";
 @import "components/_more-details";
+@import "components/address_autocomplete";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";

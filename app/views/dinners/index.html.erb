@@ -1,13 +1,14 @@
-<h1>Currently available Dinners</h1>
+<div class="d-flex justify-content-between mb-3">
+  <h1 class="m-0">Currently available Dinners:</h1>
+  <div>
+    <% if user_signed_in? %>
+      <%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-salmon-hollow" %>
+    <% end %>
+  </div>
+</div>
 
 <div class="cards">
   <% @dinners.each do |dinner| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?dinner&<%= rand(1..1000) %>')">
-      <%= link_to dinner.title, dinner_path(dinner) %>
-    </div>
+    <%= render "dinners/dinner_preview_card", dinner: dinner %>
   <% end %>
 </div>
-
-<% if user_signed_in? %>
-  <%= link_to "Add your dinner event", new_dinner_path, class: "btn btn-success" %>
-<% end %>

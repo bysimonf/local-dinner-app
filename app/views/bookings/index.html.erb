@@ -2,10 +2,8 @@
 
 <div class="cards">
   <% @bookings.each do |booking| %>
-    <div class="card-category">
-      <% dinner = Dinner.find(booking["dinner_id"]) %>
-      <%= link_to dinner.title, dinner_path(dinner) %>
-    </div>
+    <% dinner = Dinner.find(booking["dinner_id"]) %>
+    <%= render "dinners/dinner_preview_card", dinner: dinner %>
   <% end %>
 </div>
 
